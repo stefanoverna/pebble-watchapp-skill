@@ -1,0 +1,18 @@
+# Pebble build artifacts
+build/
+*.pbw
+.pebble-cache/
+.waf*
+
+# Node / PebbleKit JS
+node_modules/
+npm-debug.log*
+
+# Packaged skill archives
+*.zip
+
+# macOS / editor cruft
+.DS_Store
+*.swp
+.idea/
+.vscode/
