@@ -31,18 +31,35 @@ QEMU emulator or on a real watch, read logs, and publish to the appstore.
 
 ## Installing the skill
 
-Clone this repository into your Claude skills directory:
+### With the `skills` CLI (recommended)
+
+Works across Claude Code, Cursor, Codex, and [many other agents](https://skills.sh)
+via the [skills.sh](https://skills.sh) ecosystem:
+
+```bash
+# Install for all detected agents (interactive)
+npx skills add stefanoverna/pebble-watchapp-skill
+
+# Or target a specific agent and install globally
+npx skills add stefanoverna/pebble-watchapp-skill -a claude-code -g
+```
+
+Update later with `npx skills update pebble-watchapp`.
+
+### Manual (git clone)
+
+Clone this repository directly into your Claude skills directory:
 
 ```bash
 git clone https://github.com/stefanoverna/pebble-watchapp-skill.git \
   ~/.claude/skills/pebble-watchapp
 ```
 
-Claude will then load the skill automatically whenever you ask about Pebble app
-or watchface work (e.g. "scaffold a Pebble watchface", "`pebble build`",
-"wire up an AppMessage handler").
+Update later with `git -C ~/.claude/skills/pebble-watchapp pull`.
 
-To update later: `git -C ~/.claude/skills/pebble-watchapp pull`.
+Either way, Claude loads the skill automatically whenever you ask about Pebble
+app or watchface work (e.g. "scaffold a Pebble watchface", "`pebble build`",
+"wire up an AppMessage handler").
 
 ## Repository contents
 
